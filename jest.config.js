@@ -13,7 +13,7 @@ export default {
     "^.+\\.(js|jsx)$": "babel-jest",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  testMatch: ["<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js)"],
+  testMatch: ["<rootDir>/src/**/*.(spec|test).(ts|tsx|js)"],
   collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
     "!src/**/*.d.ts",
