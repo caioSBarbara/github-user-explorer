@@ -9,30 +9,6 @@ const api: AxiosInstance = axios.create({
   },
 });
 
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    const errorMessage =
-      error.response?.data?.message || error.message || "Erro desconhecido";
-
-    if (error.response?.status === 404) {
-      throw new Error("Usuário não encontrado");
-    }
-
-    if (error.response?.status === 403) {
-      throw new Error(
-        "Limite de requisições excedido. Tente novamente mais tarde."
-      );
-    }
-
-    if (error.response?.status >= 500) {
-      throw new Error("Erro interno do servidor. Tente novamente mais tarde.");
-    }
-
-    throw new Error(errorMessage);
-  }
-);
-
 export const githubApi = {
   async getUser(username: string): Promise<GitHubUser> {
     try {
