@@ -31,7 +31,7 @@ Uma aplicação web moderna desenvolvida em React.js para explorar usuários e r
 
 ### Core
 
-- **React.js 19** - Biblioteca principal com hooks
+- **React.js 18** - Biblioteca principal com hooks
 - **Vite** - Build tool e dev server
 - **React Router DOM** - Roteamento SPA
 
